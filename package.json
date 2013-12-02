@@ -1,0 +1,33 @@
+{
+    "name": "ubb-redirect",
+    "version": "0.0.1",
+    "description": "Redirect your UBB thread urls to others using a map",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/akhoury/ubb-redirect"
+    },
+    "keywords": [
+        "nodebb",
+        "plugin",
+        "migrator",
+        "convertor",
+        "ubb",
+        "redirect",
+        "rewrite"
+    ],
+    "author": {
+        "name": "akhoury",
+        "email": "bentael@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/akhoury/ubb-redirect/issues"
+    },
+    "dependencies": {
+        "fs-extra": "~0.8.1",
+        "optimist": "~0.6.0"
+    }
+}

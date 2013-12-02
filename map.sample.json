@@ -1,0 +1,35 @@
+{
+    "ubbRootPath": "/forums/",
+    "newRootPath": "/forum/",
+
+    "hard": {
+        "prefixNewHard": "/",
+        "map": [
+            "/ubb/login^login",
+            "/ubb/newuser^register"
+            ]
+    },
+    "forums": {
+        "newPrefix": "category/",
+        "map": {
+            "1": "1n",
+            "2": "2n"
+        }
+    },
+
+    "users": {
+        "newPrefix": "user/",
+        "map": {
+            "11": "hanna",
+            "22": "hanne"
+        }
+    },
+
+    "topics": {
+        "newPrefix": "topic/",
+        "map": {
+            "111": "111n",
+            "222": "222n"
+        }
+    }
+}
