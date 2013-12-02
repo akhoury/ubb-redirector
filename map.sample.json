@@ -1,35 +1,36 @@
 {
-    "ubbRootPath": "/forums/",
-    "newRootPath": "/forum/",
+    "ubbSiteRootDir": ".",
+    "ubbRootPath": "/forums",
+
+    "newSiteRootUrl": "http://example.com",
+    "newRootPath": "/forum",
 
     "hard": {
-        "prefixNewHard": "/",
-        "map": [
-            "/ubb/login^login",
-            "/ubb/newuser^register"
-            ]
+        "newPrefix": "",
+        "map": {
+            "ubb/login":"login",
+            "ubb/newuser":"register"
+		}
     },
+
     "forums": {
         "newPrefix": "category/",
         "map": {
-            "1": "1n",
-            "2": "2n"
+            "1": "forumSlugOrId"
         }
     },
 
     "users": {
         "newPrefix": "user/",
         "map": {
-            "11": "hanna",
-            "22": "hanne"
+				"1": "userSlugOrId"
         }
     },
 
     "topics": {
         "newPrefix": "topic/",
         "map": {
-            "111": "111n",
-            "222": "222n"
+            "1": "topicSlugOrId"
         }
     }
 }
