@@ -32,9 +32,16 @@ node ubbredirector.js  -v
 
 ```
 
+### Required Nginx setup
+
+see [nginx.example.com](nginx.example.com) to view an example on the setup I needed,
+basically the old UBB forum lived under example.com/forums, so I have a location /forums directive in
+ nginx to handle all request into that, which just proxies the requests to ubb-redirector for it to handle the logic
+
 ### UBB Version
     7.5.7
 
 ### Migrator?
 
-if you want to migrate to [NodeBB](http://nodebb.org/) give this [nodebb-plugin-ubbmigrator](https://github.com/akhoury/nodebb-plugin-ubbmigrator) a shot
+if you want to migrate to [NodeBB](http://nodebb.org/) give this [nodebb-plugin-ubbmigrator](https://github.com/akhoury/nodebb-plugin-ubbmigrator) a shot.
+I also added [nginx.forums.example.com](nginx.forums.example.com) which proxies the requests to NodeBB's process.
