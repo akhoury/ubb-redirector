@@ -2,8 +2,8 @@
     "ubbSiteRootDir": ".",
     "ubbRootPath": "/forums",
 
-    "newSiteRootUrl": "http://example.com",
-    "newRootPath": "/forum",
+    "newSiteRootUrl": "forums.afraidtoask.com",
+    "newRootPath": "/",
 
     "hard": {
         "newPrefix": "",

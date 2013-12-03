@@ -124,11 +124,13 @@ log(staticPath + ' will direct to your static ubbImages, they should live in: ' 
 
 app.use(staticPath, express.static(oldImagesDir));
 
-app.get(Map.ubbRootPath + '*', function(req, res) {
+var hasProtocol = Map.newSiteRootUrl.match(/^http(?:s)?:\/\//);
+app.get('*', function(req, res) {
 	var newRoute = getNewRoute(req.url);
-	log(req.url + ' --> ' + Map.newSiteRootUrl + newRoute);
-	if (newRoute)
-		res.redirect(301, Map.newSiteRootUrl + newRoute);
+	var redirectTo = (hasProtocol ? Map.newSiteRootUrl : req.protocol + '://' + Map.newSiteRootUrl) + (newRoute || '');
+
+	log(req.url + ' --> ' + redirectTo);
+	res.redirect(301, redirectTo);
 });
 
 var port = argv.p || argv.port || 3000;
