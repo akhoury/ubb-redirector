@@ -126,11 +126,12 @@ app.use(staticPath, express.static(oldImagesDir));
 
 app.get(Map.ubbRootPath + '*', function(req, res) {
 	var newRoute = getNewRoute(req.url);
-	log(req.url + ' --> ' + newRoute);
+	log(req.url + ' --> ' + Map.newSiteRootUrl + newRoute);
 	if (newRoute)
 		res.redirect(301, Map.newSiteRootUrl + newRoute);
 });
 
 var port = argv.p || argv.port || 3000;
-app.listen(port);
-log('running on localhost:' + port);
+var host = argv.h || argv.host || 'localhost';
+app.listen(port, host);
+log('running on ' + host + ':' + port);
