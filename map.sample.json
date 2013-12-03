@@ -1,36 +1,44 @@
 {
-    "ubbSiteRootDir": ".",
-    "ubbRootPath": "/forums",
+	"_comment_0": "ubbSiteRootDir is basically where to look for the images, in my setup I put them in here... haven\'t tested multiple options though, be careful, and as for ubbRootPath, since nginx is hanlding the root here, you can leave this blank, see nginx.example.com file",
+	"ubbSiteRootDir": ".",
+	"ubbRootPath": "/",
 
-    "newSiteRootUrl": "forums.afraidtoask.com",
-    "newRootPath": "/",
+	"_comment_1": "where does your new forums software live? you can specify a protocol if you'd like to hard-code it",
+	"newSiteRootUrl": "forums.example.com",
+	
+	"_comment_2": "if your forums live under another path too, such as forums.example.com/community or whatever, not tested",
+	"newRootPath": "",
 
-    "hard": {
-        "newPrefix": "",
-        "map": {
-            "ubb/login":"login",
-            "ubb/newuser":"register"
+	"_comment_3": "this is the urls you want to hardcode-redirect from /forums/ubb/login to just forums.example.com/login",
+	"hard": {
+		"newPrefix": "",
+		"map": {
+			"ubb/login":"login",
+			"ubb/newuser":"register"
 		}
-    },
+	},
 
-    "forums": {
-        "newPrefix": "category/",
-        "map": {
-            "1": "forumSlugOrId"
-        }
-    },
+	"_comment_4": "all the ubbthreads.php/forums/:id/:whatever will be redirected to forums.example.com/category/:forumSlugOrId",
+	"forums": {
+		"newPrefix": "category/",
+		"map": {
+			"1": "forumSlugOrId"
+		}
+	},
 
-    "users": {
-        "newPrefix": "user/",
-        "map": {
-				"1": "userSlugOrId"
-        }
-    },
+	"_comment_5": "all the ubbthreads.php/topics/:id/:whatever will be redirected to forums.example.com/topic/:topicSlugOrId",
+	"topics": {
+		"newPrefix": "topic/",
+		"map": {
+			"1": "topicSlugOrId"
+		}
+	},
 
-    "topics": {
-        "newPrefix": "topic/",
-        "map": {
-            "1": "topicSlugOrId"
-        }
-    }
+	"_comment_6": "all the ubbthreads.php/users/:id/:whatever will be redirected to forums.example.com/user/:userSlugOrId",
+	"users": {
+		"newPrefix": "user/",
+		"map": {
+			"1": "userSlugOrId"
+		}
+	}
 }

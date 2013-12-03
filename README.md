@@ -12,16 +12,23 @@ but your map must look like the [map.sample.json](map.sample.json) in structure.
 ### Install
 
 ```bash
-# say your ubb forum is in /var/www/example.com/forums
-# cd $HOME
+
 npm install ubb-redirector
-cd ubb-redirector
+cd node_modules/ubb-redirector
+# or you can clone it directly from here
+git clone https://github.com/akhoury/ubb-redirector.git
+cd ubb-director
+
+# install dependencies
 npm install
 
 # I would use 'forever' or 'supervisor' to keep it running
 sudo npm install -g forever
 
-forever -o out.log server.js --verbose --map /path/to/map.json --port 3000
+forever -o out.log ubbredirector.js --map="map.sample.json" --port=3000 --host=127.0.0.1 --verbose
+
+# or simply, for a quick demo, and it will default to values used one line above. minus the -v flag :)
+node ubbredirector.js  -v
 
 ```
 
