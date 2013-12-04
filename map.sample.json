@@ -1,7 +1,4 @@
 {
-	"_comment_0": "ubbSiteRootDir is basically where to look for the images, in my setup I put them in here... haven\'t tested multiple options though, be careful, and as for ubbRootPath, since nginx is hanlding the root here, you can leave this blank, see nginx.example.com file",
-	"ubbSiteRootDir": ".",
-	"ubbRootPath": "/",
 
 	"_comment_1": "where does your new forums software live? you can specify a protocol if you'd like to hard-code it",
 	"newSiteRootUrl": "forums.example.com",

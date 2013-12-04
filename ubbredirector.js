@@ -14,9 +14,6 @@ var express = require('express'),
 
 	mapDefaults =
 	{
-		"ubbSiteRootDir": __dirname,
-		"ubbRootPath": "/forums",
-
 		"newSiteRootUrl": "http://example.com",
 		"newRootPath": "/forum",
 
@@ -87,7 +84,7 @@ var getNewRoute = function(route) {
 
 	var imageIdx = route.indexOf(ubbImagesPath);
 	if (imageIdx >= 0) {
-		log(route + ' looks like a ubb static path');
+		log(route + ' looks like a ubb static path, you should have nginx handle those. See https://github.com/akhoury/ubb-redirector/blob/master/nginx.example.com');
 		return '';
 	}
 
@@ -116,13 +113,6 @@ var appendToNewRoute = function (route, idx, ubbPath, key){
 };
 
 var app = express();
-
-// ubb static images
-var oldImagesDir = path.resolve(path.normalize(Map.ubbSiteRootDir + Map.ubbRootPath + path.sep + ubbImagesPath));
-var staticPath = Map.ubbRootPath + path.sep + ubbImagesPath;
-log(staticPath + ' will direct to your static ubbImages, they should live in: ' + oldImagesDir);
-
-app.use(staticPath, express.static(oldImagesDir));
 
 var hasProtocol = Map.newSiteRootUrl.match(/^http(?:s)?:\/\//);
 app.get('*', function(req, res) {
