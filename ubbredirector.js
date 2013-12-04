@@ -47,7 +47,7 @@ var express = require('express'),
 		}
 	};
 
-var log = argv.v || argv.verbose ? function(msg){ console.log('[ubb-redirect] ' + msg ); } : function(){};
+var log = argv.v || argv.verbose ? function(msg){ console.log('[ubb-redirector] ' + msg ); } : function(){};
 
 if (fse.existsSync(mapFile)) {
 	log('reading map file: ' + mapFile + ' please be patient...');
