@@ -14,8 +14,8 @@ var express = require('express'),
 
 	mapDefaults =
 	{
-		"newSiteRootUrl": "http://example.com",
-		"newRootPath": "/forum",
+		"newSiteRootUrl": "forums.example.com",
+		"newRootPath": "",
 
 		"hard": {
 			"newPrefix": "",
