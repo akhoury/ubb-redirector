@@ -20,6 +20,7 @@ server {
 	location /forums/images {
                 # you can turn that off if you want
 		autoindex on;
+		
                 alias /var/www/example.com/forums/images/;
         }
 
@@ -27,13 +28,11 @@ server {
 	# will be handled by ubbredirector
 	# since I had UBB installed in /forums pre-migration
 	location /forums {
-
 		root /home/admin/code/ubb-redirector;
 	      	proxy_set_header X-Real-IP $remote_addr;
       		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     		proxy_set_header Host $http_host;
       		proxy_set_header X-NginX-Proxy true;
-
      		proxy_pass http://ubbredirector/;
       		proxy_redirect off;
       	}
