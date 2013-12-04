@@ -7,7 +7,7 @@ it can be used to anything other __target__ forum, doesn't have to be [NodeBB](h
 
 You must create/generate a map of the __source__ topics/forums/users ids, each will map to either ids or slugs of the __target__ forum software you will be using.
 If you decide to migrate to NodeBB, use the migrator linked below, which will make that easy for you, otherwise, I'll let you figure that out,
-but your map must look like the [map.sample.json](map.sample.json) in structure. Look at the [source](server.js) if you're curious, it's not as bad as you think.
+but your map must look like the [map.sample.json](map.sample.json) in structure. Look at the [source](ubbredirector.js) if you're curious, it's not as bad as you think.
 
 ### Install
 
