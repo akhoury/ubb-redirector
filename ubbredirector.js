@@ -126,4 +126,4 @@ app.get('*', function(req, res) {
 var port = argv.p || argv.port || 3000;
 var host = argv.h || argv.host || 'localhost';
 app.listen(port, host);
-log('running on ' + host + ':' + port);
+console.log('running on ' + host + ':' + port);
