@@ -1,3 +1,7 @@
+# Important
+### this project has moved to https://github.com/akhoury/RedirectBB
+
+
 ### [UBB](http://www.ubbcentral.com/) Forum post-migration url redirector
 
 Quick and dirty solution to redirect my migrated [UBB](http://www.ubbcentral.com/) forum Topics/Forums/Users URLs to [NodeBB](http://nodebb.org/) ids.
